@@ -30,8 +30,40 @@ code {
   animation: float 6s ease-in-out infinite;
 }
 
-/* Optional: make headings more responsive */
+/* Make headings responsive */
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
   scroll-margin-top: 80px; /* For fixed navbar offset when scrolling */
+  word-wrap: break-word; /* Prevent text overflow on small screens */
+}
+
+/* Responsive font scaling */
+h1 {
+  font-size: 2.5rem; /* Desktop default */
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+
+/* Mobile overrides */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.75rem; /* Smaller on mobile */
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+  body {
+    padding: 0 10px; /* Add breathing space on mobile */
+  }
+  img, video {
+    max-width: 100%;
+    height: auto; /* Responsive media */
+  }
 }
